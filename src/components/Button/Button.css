@@ -1,0 +1,50 @@
+.custom-button {
+    display: flex;
+    align-items: center;
+    padding: .8rem 2rem;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-family: var(--heading);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .10),
+    0 10px 50px rgba(0, 0, 0, .02);
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.custom-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--text-color);
+    z-index: -1;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: .5s ease-in-out;
+}
+
+.custom-button:hover {
+    color: var(--text-sec);
+}
+
+.custom-button:hover::after {
+    transform: scaleY(1)
+} 
+
+.custom-button.link.large {
+    padding: 1.1rem 4rem;
+}
+
+.custom-button.large {
+    padding: 1.4rem 4rem;
+}

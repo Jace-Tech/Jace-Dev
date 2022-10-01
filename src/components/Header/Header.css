@@ -1,0 +1,112 @@
+.header {
+    padding: 1.5rem 0;
+    /* background-color: var(--header-bg); */
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px); 
+}
+
+/* LOGO */
+
+.headerLogo {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--text-color);
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "Raleway", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media screen and (max-width: 582px) {
+    .headerLogo {
+        font-size: 22px;
+    }
+}
+
+.headerLogo.transparent {
+    background-color: transparent;
+}
+
+.dev {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--text-sec);
+    font-family: inherit;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BURGER */
+.burger {
+    display: flex;
+    padding: .4rem;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+
+.burger::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+.burger:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--text-colo)
+}
+
+.burger.change {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.line {
+    width: 28px;
+    height: 1.5px;
+    border-radius: var(--border-radius);
+    margin: .18rem 0;
+    background-color: var(--text-color);
+    transition: .6s ease-in-out;
+}
+
+.line.rotate-left {
+    width: 14px;
+    rotate: 40deg;
+    align-self: flex-start;
+    translate: -0.2px -3px;
+    margin: 0;
+}
+ 
+.line.hide {
+    margin: 0;
+    rotate: -45deg;
+    translate: -2px 0;
+}
+
+.line.rotate-right {
+    width: 14px;
+    rotate: 40deg;
+    align-self: flex-end;
+    translate: -3.5px 2.8px;
+    margin: 0;
+}

@@ -1,0 +1,157 @@
+:root {
+  --text-color: #1e1e1e;
+  --text-sec: #8c8c8c;
+  --bg-color: rgb(251	250	249	);
+  --stroke: rgba(0, 0, 0, 0.5);
+  --header-bg: #fefefe;
+  --text: 'Dosis', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heading: "Raleway", Georgia, 'Times New Roman', Times, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text);
+}
+
+
+/* RESETS */
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 582px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+/* END RESETS */
+
+/* UTILS */
+
+.app {
+  min-height: 100vh;
+  line-height: 1.8;
+  width: 100%;
+  scroll-behavior: smooth;
+  user-select: none;
+  background-color: var(--bg-color);
+}
+
+
+.app.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+  --stroke: rgba(255, 255, 255, 0.5);
+  --header-bg: #202124;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .10),
+              0 10px 20px rgba(0, 0, 0, .05);
+}
+
+.shadow-lg {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .10),
+              0 10px 40px rgba(0, 0, 0, .02);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.hollow {
+  -webkit-text-stroke: 1.5px;
+  -webkit-text-stroke-color: var(--color);
+  color: transparent;
+  background-clip: text;
+  background-position: -1000px;
+  transition: .4s ease-in-out;
+  overflow: hidden;
+}
+
+.hollow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* z-index: -1; */
+  width: 100%;
+  left: 0;
+  top: -300px;
+  height: calc(100% * 1px);
+  background-color: var(--text-color);
+}
+
+.hollow:hover::before {
+  top: -300px;
+  background-color: var(--text-color);
+}
+
+.section-title {
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+.section-title::after {
+  color: var(--text-color);
+  font-size: 3rem;
+  color: var(--text-sec);
+}
+
+.section-title.array::after {
+  content: ": [ ";
+}
+
+.section-title.object::after {
+  content: ": { ";
+}
+.close {
+  margin-top: 3rem;
+}
+
+.close.array::after {
+  content: "]";
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-sec)
+}
