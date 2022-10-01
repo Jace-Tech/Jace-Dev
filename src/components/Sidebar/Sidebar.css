@@ -60,22 +60,22 @@
     min-width: 150px !important;
 }
 
-.side-link-item .link::after{
+/* .side-link-item .link::after{
     content: "<";
     opacity: 0;
     display: inline-block;
     transition: .5s ease-in-out;
     transform: translateX(-40px);
-}
+} */
 
 .side-link-item .link:hover,
 .side-link-item.active .link {
 
-    transform: translateX(-10px);
+    transform: translateX(-20px);
     background-color: var(--color);
 }
 
-.side-link-item .link:hover::after,
+/* .side-link-item .link:hover::after, */
 .side-link-item.active .link::after  {
     transform: translateX(-10px);
     opacity: 1;

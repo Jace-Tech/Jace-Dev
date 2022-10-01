@@ -149,9 +149,17 @@ button {
   margin-top: 3rem;
 }
 
-.close.array::after {
+.close::after {
   content: "]";
   font-size: 3rem;
   font-weight: 600;
   color: var(--text-sec)
+}
+
+.close.array::after {
+  content: "]";
+}
+
+.close.object::after {
+  content: "}";
 }

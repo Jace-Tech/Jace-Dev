@@ -2,4 +2,27 @@
     font-size: 1.2rem;
     max-width: 600px;
     margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.contact-button {
+    margin-top: 5rem;
+}
+
+.send-btn {
+    display: flex;
+    align-items: center;
+}
+
+.send-icon {
+    position: relative;
+    /* transform: rotate(-30deg); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.send-icon {
+    margin-right: 1rem;
 }
