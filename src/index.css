@@ -36,7 +36,7 @@ html {
 
 @media screen and (max-width: 425px) {
   html {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -85,6 +85,11 @@ button {
 .shadow {
   box-shadow: 0 2px 10px rgba(0, 0, 0, .10),
               0 10px 20px rgba(0, 0, 0, .05);
+}
+
+.shadow-sm {
+  box-shadow: 0 0px 1px rgba(0, 0, 0, .10),
+              0 5px 8px rgba(0, 0, 0, .05);
 }
 
 .shadow-lg {
@@ -162,4 +167,35 @@ button {
 
 .close.object::after {
   content: "}";
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABC0lEQVRIie3VPU4DMRQE4C9wgBA6oCKEMjQgulyAA9DR8XOntKThAtTQgQQVLZRESCACJwjFeiFY3mR3QUJCmcbr8XhGzyv7MccMNAr4JeyjFebnuIs0XeyF7xHO8B4bLRSY36AXAloJTY58vYdbNKdoP3GC0zLCCAMcxWSqghU81Ai4x1qZgF/FnwSs4rWG10h2vFOxgecwVkUn7G2nFrvo4wWHNcxzHAePfvD8dkTjMP7kvzSCz7hI0JaV2alhvhn2rk+Si5FoFIRNXFcMOAgBg0kydRxDLFc0J3synmLyf160ofr34DEmU/0gf66vfPWAWf1gC7vYEfWEVAVv2Mal8v3gImU+Ryl8AEAsK36707h0AAAAAElFTkSuQmCCs=");
+  background-repeat: repeat;
+}
+
+.page-title {
+  margin-top: 2rem;
+  font-size: 4rem;
+  --color: var(--text-color);
+}
+
+@media screen and (max-width: 582px) {
+  .page-title {
+    text-align: center;
+  }
+}
+
+.page-title::after {
+  content: " />";
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:active {
+  transform: scale3d(0.95, 0.95, 0.95);
 }

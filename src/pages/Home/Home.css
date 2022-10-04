@@ -1,11 +1,5 @@
 
 /* Hero */
-.home {
-    min-height: 100vh;
-    width: 100%;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABC0lEQVRIie3VPU4DMRQE4C9wgBA6oCKEMjQgulyAA9DR8XOntKThAtTQgQQVLZRESCACJwjFeiFY3mR3QUJCmcbr8XhGzyv7MccMNAr4JeyjFebnuIs0XeyF7xHO8B4bLRSY36AXAloJTY58vYdbNKdoP3GC0zLCCAMcxWSqghU81Ai4x1qZgF/FnwSs4rWG10h2vFOxgecwVkUn7G2nFrvo4wWHNcxzHAePfvD8dkTjMP7kvzSCz7hI0JaV2alhvhn2rk+Si5FoFIRNXFcMOAgBg0kydRxDLFc0J3synmLyf160ofr34DEmU/0gf66vfPWAWf1gC7vYEfWEVAVv2Mal8v3gImU+Ryl8AEAsK36707h0AAAAAElFTkSuQmCCs=");
-    background-repeat: repeat;
-}
 
 .home-hero-inner {
     margin-top: 1.5rem;

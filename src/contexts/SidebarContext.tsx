@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 interface SidebarContextProps {
@@ -13,7 +14,11 @@ interface SidebarContextProviderProps {
 
 const SidebarContextProvider: React.FC<SidebarContextProviderProps> = ({ children }) => { 
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false)
+    const location = useLocation()
 
+    useEffect(() => {
+        setIsSidebarOpen(false)
+    }, [location])
     return ( 
         <SidebarContext.Provider value={{ isSidebarOpen, setIsSidebarOpen }}> 
             <Sidebar />

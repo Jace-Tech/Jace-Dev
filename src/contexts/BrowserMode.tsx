@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
 interface BrowserModeContextProp {
     isDarkMode: boolean;
@@ -16,7 +17,8 @@ interface BrowserModeProps {
 const BrowserModeProvider:React.FC<BrowserModeProps> = ({ children }) => {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
-
+    const {pathname} = useLocation()
+    
     const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     const changeMode = (mode: string) => {
@@ -46,6 +48,14 @@ const BrowserModeProvider:React.FC<BrowserModeProps> = ({ children }) => {
         const _mode = mode === "dark" ? true : false;
         setIsDarkMode(_mode)
     }, [])
+
+    useEffect(() => {
+        window.scrollTo({
+            behavior: "smooth",
+            top: 0,
+            left: 0,
+        })
+    }, [pathname])
     return (
         <BrowserModeContext.Provider value={{ isDarkMode, setIsDark: setIsDarkMode, isScrolled, changeMode }}>
             { children }

@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../Button/Button'
 import { IoMail } from "react-icons/io5"
 import "./Contact.css"
+import { EMAIL } from '../../utils'
 
 interface ContactProps {} 
 
@@ -13,7 +14,7 @@ const Contact:React.FC<ContactProps> = () => {
                 <p className="contact-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, adipisci ullam? Alias odit neque voluptatum ea atque ducimus error dicta.</p>
 
                 <div className="contact-button">
-                    <Button large style={{fontSize: "1.2rem"}}>
+                    <Button large href={`mailto:${EMAIL}?body=Hello Jace Dev`} style={{fontSize: "1.2rem", width: "fit-content"}}>
                         <div className="send-btn">
                             <div className="send-icon">
                                 <IoMail />
