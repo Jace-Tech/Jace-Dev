@@ -45,8 +45,9 @@ const BrowserModeProvider:React.FC<BrowserModeProps> = ({ children }) => {
             return
         }
 
-        const _mode = mode === "dark" ? true : false;
-        setIsDarkMode(_mode)
+        // const _mode = mode === "dark" ? true : false;
+        // setIsDarkMode(_mode)
+        setIsDarkMode(false)
     }, [])
 
     useEffect(() => {

@@ -1,0 +1,70 @@
+.experience {
+    padding: 0px 1rem 2rem 1rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.experience:not(:last-of-type) {
+    border-left: 2px dashed var(--text-sec);
+}
+
+
+.experience::before {
+    content: "";
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--text-sec);
+    border: 2px solid var(--text-sec);
+    position: absolute;
+    left: -0.7%;
+    top: 0;
+}
+
+.inner-card {
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 600px;
+}
+
+.stack {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.stack-duration {
+    display: flex;
+    align-items: center;
+    color: var(--text-sec);
+}
+
+.stack-title {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: var(--heading);
+}
+
+.text-divider {
+    display: flex;
+    margin: 0 .5rem;
+}
+
+.stack-company {
+    font-family: var(--heading);
+}
+
+.time {
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.stack-desc {
+    font-size: .85rem;
+    margin-top: .5rem;
+    letter-spacing: 1px;
+}

@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { Route, RouterProvider, Routes } from 'react-router-dom'
 import { useBrowserMode } from './contexts/BrowserMode'
 import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
+import Project from './pages/Project/Project'
 import { styleVariables } from './utils'
 
 
@@ -11,6 +13,8 @@ const App = () => {
   const router = [
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
+    { path: "/project", element: <Project /> },
+    { path: "/contact", element: <Contact /> },
   ]
 
   useEffect(() => {

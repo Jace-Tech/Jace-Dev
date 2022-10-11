@@ -36,10 +36,15 @@
 }
 
 .tab-items-container {
-    margin-top: 1rem;
+    margin-top: 3rem;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
+    gap: 1.5rem;
+}
+
+.experience-container {
+    margin-top: 3rem;
     gap: 1.5rem;
 }
 
@@ -51,13 +56,34 @@
     letter-spacing: 1.5px;
     min-width: 200px;
     flex: 1;
-    max-width: 300px;
     display: flex;
     align-items: center;
     font-size: 1rem;
     border: 1px solid #eee;
 }
 
+.tab-menu-item:last-of-type {
+    max-width: 250px;
+}   
+
+@media screen and (max-width: 582px) {
+    
+    .tab-menu-item:last-of-type {
+        max-width: 100%;
+    }   
+
+}
+
 .tab-menu-item:hover {
     transform: scale3d(1.01, 1.01, 1.01);
+}
+
+.item-img {
+    height: 30px;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+.item-title {
+    flex: 1;
 }
