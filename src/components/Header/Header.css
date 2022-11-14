@@ -1,10 +1,13 @@
 .header {
     padding: 1.5rem 0;
-    /* background-color: var(--header-bg); */
     z-index: 1000;
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px); 
+}
+
+.dark .header {
+    background-color: rgba(30, 30, 30, .3);
 }
 
 /* LOGO */

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Route, RouterProvider, Routes } from 'react-router-dom'
 import { useBrowserMode } from './contexts/BrowserMode'
 import About from './pages/About/About'
+import Auth from './pages/Auth/Auth'
 import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
 import Project from './pages/Project/Project'
@@ -15,6 +16,7 @@ const App = () => {
     { path: "/about", element: <About /> },
     { path: "/project", element: <Project /> },
     { path: "/contact", element: <Contact /> },
+    { path: "/jacemuan", element: <Auth /> },
   ]
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className={`app ${isDarkMode && "dark"}`}>
+    <div className={`app ${!isDarkMode && "dark"}`}>
       <Routes>
         { router.map(({ element, path }, index) => <Route key={`${path}-${index}`} element={element} path={path} />) }
       </Routes>

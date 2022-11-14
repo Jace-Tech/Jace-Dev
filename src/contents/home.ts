@@ -16,13 +16,16 @@ export const PROJECT_CONTENT = [
         id: "123djsdfhjhdsjhsdsdsdcsdhcsdhcbd", 
         title: "Lorem ipsum dolor",
         pic: contentPic,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        link: "",
+        category: ""
     },
     { 
         id: "sjdbsdcsdcgdhscghdcgsdgjcdjhcgdh", 
         title: "Lorem ipsum dolor",
         pic: contentPic,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        link: ""
     },
 ]
 

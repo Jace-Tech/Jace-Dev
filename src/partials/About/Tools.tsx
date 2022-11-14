@@ -30,8 +30,8 @@ const Tools: React.FC<ToolsProps> = () => {
                 </ul>
 
                 <div className="tab-items-container">
-                    {listMenu.map(({ link, title, img }: { link: string, title: string, img: any }, index: number) => (
-                        <a href={link} key={`${title}-${index}`} className="tab-menu-item shadow-sm">
+                    {listMenu.map(({ link, title, img, filter }: { link: string, title: string, img: any, filter: boolean }, index: number) => (
+                        <a href={link} key={`${title}-${index}`} className={`tab-menu-item shadow-sm ${filter ? "filter-img" : ""}`}>
                             <img src={img} className="item-img" alt={title} />
                             <span className="item-title">{title}</span>
                         </a>

@@ -1,0 +1,49 @@
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 1.2rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: .8rem;
+    font-family: var(--heading);
+    margin: .5rem;
+}
+
+.alert.error {
+    border-bottom: 2px solid rgb(227, 45, 42);
+    background-color: rgb(227, 45, 42, .1);
+    color:rgb(227, 45, 42);
+}
+
+.alert.success {
+    border-bottom: 2px solid rgb(42, 227, 42);
+    background-color: rgb(42, 227, 42, .1);
+    color:rgb(42, 227, 42);
+}
+
+.alert-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.auth-back {
+    margin-bottom: 1rem;
+}
+
+.auth-back-link {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+}
+
+.auth-back-link * {
+    font-family: "Raleway", Georgia, 'Times New Roman', Times, serif;
+}

@@ -5,20 +5,20 @@
 }
 
 .experience:not(:last-of-type) {
-    border-left: 2px dashed var(--text-sec);
+    border-left: 2px solid var(--text-sec);
 }
 
 
 .experience::before {
     content: "";
     display: flex;
-    width: 10px;
-    height: 10px;
-    border-radius: var(--border-radius);
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
     background-color: var(--text-sec);
-    border: 2px solid var(--text-sec);
     position: absolute;
-    left: -0.7%;
+    left: -.4rem;
     top: 0;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .stack-desc {
-    font-size: .85rem;
+    font-size: .9rem;
     margin-top: .5rem;
     letter-spacing: 1px;
 }

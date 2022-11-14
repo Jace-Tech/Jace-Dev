@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../../components/Button/Button'
 import { PROJECT_CONTENT } from '../../contents/home'
-import Project from './Project'
+import Project from '../../components/Project/Project'
 
 interface ProjectsProps { }
 

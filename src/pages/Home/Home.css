@@ -162,6 +162,12 @@
     }
 }
 
+@media screen and (max-width: 582px) {
+    .project-img { 
+        min-height: 300px;
+    }
+}
+
 .project-title {
     font-size: 1.5rem;
     text-transform: capitalize;

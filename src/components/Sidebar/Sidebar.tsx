@@ -22,7 +22,7 @@ const Sidebar:React.FC<SidebarProps> = () => {
                         <ul className="side-link-menu">
                             { LINKS_CONTENTS.map(({link, title}: linkContent, index: number) => (
                                 <li className={`side-link-item ${pathname == link && "active"}`} key={`${index}-${title}`}>
-                                    <Link to={link} className="link hollow">{ title }</Link>
+                                    <Link to={link} className="hollow link">{ title }</Link>
                                 </li>
                             )) }
                         </ul>
